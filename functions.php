@@ -8,6 +8,12 @@
  */
 
 if ( ! function_exists( 'woo_theme_setup' ) ) :
+
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
